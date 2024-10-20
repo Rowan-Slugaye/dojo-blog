@@ -9,7 +9,9 @@ const Home = () => {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
       ])
 
+    const handleDelete = (id) => {
       
+    }
 
     return ( 
         <div className="home">
