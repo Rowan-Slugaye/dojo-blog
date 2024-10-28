@@ -1,40 +1,7 @@
-import { useState } from "react";
-
 const Create = () => {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
-    const [auther, setAuther] = useState('mario');
-
     return ( 
         <div className="create">
             <h2>Add a Neew Blog</h2>
-            <form >
-                <label>Blog title:</label>
-                <input 
-                type="text"
-                required 
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                />
-                <label>Blog body:</label>
-                <textarea
-                required
-                value={ body }
-                onChange={(e) => setBody(e.target.value)}
-                ></textarea>
-                <label>Blog auther:</label>
-                <select
-                value={ auther }
-                onChange={(e) => setAuther(e.target.value)}
-                >
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
-                </select>
-                <button>add blog</button>
-                <p>{ title }</p>
-                <p>{ body }</p>
-                <p>{ auther }</p>
-            </form>
         </div>
      );
 }
