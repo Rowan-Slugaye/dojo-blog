@@ -1,1 +1,1 @@
-followed ep 25 on youtub tutorial
+followed ep 26 on youtub tutorial
