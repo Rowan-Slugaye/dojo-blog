@@ -9,7 +9,13 @@ const Create = () => {
         e.preventDefault();
         const blog = { title, body, auther };
 
-        console.log(blog)
+        fetch(process.env.REACT_APP_API_URL || "http://localhost:8000/blogs", {
+            method: 'post',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(blog)
+        }) .then(() => {
+            console.log('new blog added')
+        })
     }
 
     return ( 
