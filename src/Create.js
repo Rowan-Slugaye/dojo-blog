@@ -3,11 +3,11 @@ import { useState } from "react";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [auther, setAuther] = useState('mario');
+    const [author, setAuthor] = useState('mario');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, auther };
+        const blog = { title, body, author };
 
         fetch(process.env.REACT_APP_API_URL || "http://localhost:8000/blogs", {
             method: 'post',
@@ -37,8 +37,8 @@ const Create = () => {
                 ></textarea>
                 <label>Blog auther:</label>
                 <select
-                value={ auther }
-                onChange={(e) => setAuther(e.target.value)}
+                value={ author }
+                onChange={(e) => setAuthor(e.target.value)}
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
